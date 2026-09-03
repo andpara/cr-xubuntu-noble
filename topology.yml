@@ -1,12 +1,5 @@
 name: bc03-sandbox
 
-router:
-  - name: router
-    base_box: 
-      image: ubuntu-noble-x86_64
-      mgmt_user: ubuntu
-    flavor: standard.small
-
 hosts:
   - name: xubuntu-desktop
     base_box: 
@@ -17,7 +10,12 @@ hosts:
       - size: 8
       - size: 2
 
-routers: []
+routers:
+  - name: router
+    base_box: 
+      image: ubuntu-noble-x86_64
+      mgmt_user: ubuntu
+    flavor: standard.small
 
 networks:
   - name: network
