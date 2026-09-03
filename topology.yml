@@ -2,7 +2,7 @@ name: bc03-sandbox
 
 hosts:
   - name: xubuntu-desktop
-    base_box: 
+    base_box:
       image: ubuntu-noble-x86_64
       mgmt_user: ubuntu
     flavor: standard.small
@@ -12,18 +12,18 @@ hosts:
 
 routers:
   - name: router
-    base_box: 
+    base_box:
       image: ubuntu-noble-x86_64
       mgmt_user: ubuntu
     flavor: standard.small
 
-networks:
-  - name: network
-    cidr: 10.0.0.0/24
-
 wan:
   name: internet-connection
   cidr: 10.10.10.0/24
+
+networks:
+  - name: network
+    cidr: 10.0.0.0/24
 
 net_mappings:
   - host: xubuntu-desktop
@@ -36,4 +36,3 @@ router_mappings:
     ip: 10.0.0.1
 
 groups: []
-
