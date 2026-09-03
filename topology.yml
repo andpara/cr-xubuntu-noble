@@ -1,38 +1,31 @@
-name: bc03-sandbox
+name: bc03-test
 
 hosts:
-  - name: xubuntu-desktop
+  - name: host
     base_box:
       image: ubuntu-noble-x86_64
       mgmt_user: ubuntu
     flavor: standard.small
-    volumes:
-      - size: 8
-      - size: 2
 
 routers:
   - name: router
     base_box:
-      image: ubuntu-noble-x86_64
-      mgmt_user: ubuntu
+      image: debian-12-x86_64
+      mgmt_user: debian
     flavor: standard.small
-
-wan:
-  name: internet-connection
-  cidr: 10.10.10.0/24
 
 networks:
   - name: network
-    cidr: 10.0.0.0/24
+    cidr: 192.168.50.0/24
 
 net_mappings:
-  - host: xubuntu-desktop
+  - host: host
     network: network
-    ip: 10.0.0.3
+    ip: 192.168.50.5
 
 router_mappings:
   - router: router
     network: network
-    ip: 10.0.0.1
+    ip: 192.168.50.1
 
 groups: []
