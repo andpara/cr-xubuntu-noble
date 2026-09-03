@@ -1,8 +1,8 @@
 name: bc03-sandbox
 
-hosts: []
+routers: []
 
-routers:
+hosts:
   - name: xubuntu-desktop
     base_box: 
       image: ubuntu-noble-x86_64
@@ -20,9 +20,9 @@ wan:
   name: internet-connection
   cidr: 10.10.10.0/24
 
-net_mappings: []
+router_mappings: []
 
-router_mappings:
+net_mappings:
     - router: xubuntu-desktop
       network: network
       ip: 10.0.0.1
