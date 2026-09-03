@@ -5,9 +5,12 @@ hosts: []
 routers:
   - name: xubuntu-desktop
     base_box: 
-      image: btcmp03-min-xubuntu-24.04-x86_64
+      image: ubuntu-noble-x86_64
       mgmt_user: ubuntu
     flavor: c6_r5_d12
+    volumes:
+      - size: 8
+      - size: 2
 
 networks:
   - name: network
