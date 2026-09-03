@@ -5,7 +5,7 @@ hosts:
     base_box: 
       image: ubuntu-noble-x86_64
       mgmt_user: ubuntu
-    flavor: c6_r5_d12
+    flavor: standard.small
     volumes:
       - size: 8
       - size: 2
