@@ -21,7 +21,7 @@ wan:
   cidr: 10.10.10.0/24
 
 net_mappings:
-    - router: xubuntu-desktop
+    - host: xubuntu-desktop
       network: network
       ip: 10.0.0.1
 
