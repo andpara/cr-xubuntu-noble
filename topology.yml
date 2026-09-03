@@ -1,7 +1,5 @@
 name: bc03-sandbox
 
-routers: []
-
 hosts:
   - name: xubuntu-desktop
     base_box: 
@@ -11,6 +9,8 @@ hosts:
     volumes:
       - size: 8
       - size: 2
+
+routers: []
 
 networks:
   - name: network
